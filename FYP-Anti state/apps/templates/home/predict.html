@@ -1,0 +1,80 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Template Page {% endblock %} 
+
+{% block body_class %} index-page {% endblock %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  {% include 'includes/navigation-transparent.html' %} 
+
+<header class="header-2">
+    <div class="page-header min-vh-50 relative" style=" background-image: url('/static/assets/img/bgt.jpg')">
+      <span class="mask bg-gradient-info opacity-6"></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto">
+            <h1 class="text-white pt-3 mt-n5">Anti-State Detection Using Dataset</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<div align="center">
+             <h3><b>Note:</b></h3><p style="width: 500px; font-size:20px;color:black">Enter your dataset below your data should be clean and processd after uploading your dataset specify the number of tweet you want to predict. <br></p>
+
+
+ <div  id="form" style="background-color:#00acee; width:fit-content;height:fit-content;">
+
+
+   <table style=" border:1px solid;">
+
+<form action="/s_t" method="POST" enctype="multipart/form-data">
+        <tr>
+   <td style="color:black; font-size:20px">
+       Enter Dataset
+</td>
+<td>
+<input style="color:black" type="file" id="file" name="file" enctype="multipart/form-data" required>
+</td>
+    </tr>
+    <tr>
+  <td style="color:black; font-size:20px">
+      No. of Tweets
+  </td>
+   <td> <input type="number" id="limit" name="limit" required></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="color:black; font-size:18px"><a href="/result"></a> <input type="submit"  value="Submit"></td>
+</tr>
+</form>
+</table>
+
+
+
+</div>
+</div>
+
+<br>
+
+
+
+<div id="prediction">
+
+
+</div>
+
+
+
+
+
+
+
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}

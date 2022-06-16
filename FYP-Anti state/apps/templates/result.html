@@ -1,0 +1,45 @@
+
+{% block content %}
+
+ <header class="bg-gradient-dark">
+
+      <span class="mask bg-gradient-info opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mx-auto my-auto">
+              <a href="index.html"><h1 class="text-white">Homepage </h1></a>
+
+
+
+<table border="1px">
+    <tr style="background-color:aqua" >
+
+        <td style="font-size:25px"><center><b>Tweets</b></center></td>
+
+                <td style="font-size:25px"><center><b>Usernames</b></center></td>
+        <td style="font-size:25px"><center><b>Id</b></center></td>
+                 <td style="font-size:25px"><center><b>Predictions</b></center></td>
+    </tr>
+
+
+
+{% for key,value in result.items()%}
+<tr style="background-color:aqua">
+
+<!--  <td style="font-size:20px">{{value[]}}</td>-->
+  <td style="font-size:20px">{{key}}</td>
+    <td style="font-size:20px">{{value[0]}}</td>
+   <td style="font-size:20px">{{value[1]}}</td>
+    <td style="font-size:20px">{{value[2]}}</td>
+
+
+</tr>
+{%endfor%}
+
+</table>
+                       </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{%endblock%}`

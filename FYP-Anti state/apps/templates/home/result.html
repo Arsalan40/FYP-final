@@ -1,0 +1,23 @@
+
+{% block content %}
+
+<table border="1px">
+    <tr style="background-color: cadetblue;">
+        <td>Tweet</td>
+        <td>Prediction</td>
+    </tr>
+
+
+
+{% for key,value in result.items()%}
+<tr style="background-color:lightblue">
+
+  <td>{{key}}</td>
+  <td>{{value}}</td>
+
+</tr>
+
+    {%endfor%}
+
+</table>
+{%endblock%}`
